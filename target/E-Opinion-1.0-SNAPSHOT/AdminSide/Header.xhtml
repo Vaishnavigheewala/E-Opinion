@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <meta charset="UTF-8">
+        <title>Facelet Title</title>
+<!--            <link rel="stylesheet" href="asset/css/jsfcss.css"/>
+            <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'/>-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/></meta>
+<style>
+         header {
+         margin-left: 240px;
+         border : 2px solid blue;
+         background-color : #081D45;
+         color : white;
+         }
+         header p {
+         font-size : 100%;
+         }
+         #header-icon {
+         display : inline-block;
+         margin: 50px 10px 50px
+         }
+         #header-desc {
+         display : inline-block;
+         margin : 25px;
+         }
+         #header-menu {
+         display : inline-block;
+         float: right;
+         margin : 75px 50px 50px 50px;
+         }
+         </style>
+    </h:head>
+    <h:body>
+        <ui:include src="Sidebar.html" />
+                    
+    <header>
+
+         <div id="header-desc">
+            <h1>Online Public Opinion for E-Governance</h1>
+            <p>
+               Looking for targeted responses to your surveys?
+Get the responses you need in minutes with Survey Audience, our trusted panel of more than 175 million respondents from across the globe. <br>
+E-Opinion</br>
+            </p>
+         </div>
+
+      </header>
+      
+  <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+ </script>
+    </h:body>
+    
+</html>
+

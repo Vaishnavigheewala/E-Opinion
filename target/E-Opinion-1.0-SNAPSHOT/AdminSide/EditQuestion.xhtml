@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Edit Question</title>
+        <style>
+                            body {
+			background-color: #EFEEF1;
+			font-family: Verdana;
+			text-align: center;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+                        margin-left:650px;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */ 
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input, 
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio 
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		.btn {
+			padding: 10px 20px;
+                    font-size: 16px;
+                    background-color: #white;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    margin-left:270px;
+                    margin-top:20px;
+                        }
+        </style>
+    </h:head>
+    <h:body>
+                <ui:include src="Header.xhtml"></ui:include>
+        <f:view>
+
+             <h:form>
+                <h1><h:outputText value="Edit Question"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="Qid:" for="qid" />
+                    <h:inputText id="qid" value="#{questionManagedBean.obj.qid}" title="Qid" required="true" requiredMessage="The Qid field is required."/>
+                    <h:outputLabel value="QTitle:" for="QTitle" />
+                    <h:inputText id="QTitle" value="#{questionManagedBean.obj.QTitle}" title="QTitle" />
+                    <h:outputLabel value="Sname:" for="sname" />
+                    <h:selectOneMenu value="#{questionManagedBean.obj.sname}">
+   			<f:selectItem itemValue="Air Pollution" itemLabel="Air - Pollution" />
+   			<f:selectItem itemValue="Water Pollution" itemLabel="Water Pollution" />
+   			<f:selectItem itemValue="Market Reserach" itemLabel="Market Reserach" />
+                        <f:selectItem itemValue="Food Survey" itemLabel="Food Survey" />
+   			<f:selectItem itemValue="Health Survey" itemLabel="Health Survey" />
+   			<f:selectItem itemValue="Voting Survey" itemLabel="Voting Survey" />	
+                    </h:selectOneMenu>
+                    <h:outputLabel value="Option1:" for="option1" />
+                    <h:inputText id="option1" value="#{questionManagedBean.obj.option1}" title="Option1" required="true" requiredMessage="The Option1 field is required."/>
+                    <h:outputLabel value="Option2:" for="option2" />
+                    <h:inputText id="option2" value="#{questionManagedBean.obj.option2}" title="Option2" required="true" requiredMessage="The Option2 field is required."/>
+                    <h:outputLabel value="Option3:" for="option3" />
+                    <h:inputText id="option3" value="#{questionManagedBean.obj.option3}" title="Option3" required="true" requiredMessage="The Option3 field is required."/>
+                    <h:outputLabel value="Option4:" for="option4" />
+                    <h:inputText id="option4" value="#{questionManagedBean.obj.option4}" title="Option4" required="true" requiredMessage="The Option4 field is required."/>
+                    <h:outputLabel value="Option5:" for="option5" />
+                    <h:inputText id="option5" value="#{questionManagedBean.obj.option5}" title="Option5" required="true" requiredMessage="The Option5 field is required."/>
+                    <h:outputLabel value="Date:" for="date" />
+                    <h:inputText id="date" value="#{questionManagedBean.obj.date}" title="Date" required="true" requiredMessage="The Date field is required.">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                   <h:commandButton value="Edit Question" action="#{questionManagedBean.update()}"/>
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+

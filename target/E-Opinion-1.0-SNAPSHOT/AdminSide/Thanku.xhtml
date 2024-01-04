@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Thank You</title>
+    <style>
+/*        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }*/
+
+        .thank-you-container {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 100px;
+            margin-left: 500px;
+            margin-right: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .thank-you-message {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .emoji {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .back-to-home {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #000099;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .back-to-home:hover {
+            background-color: #2697FF;
+        }
+    </style>
+    </h:head>
+    <h:body>
+                        <ui:include src="navbar.html"></ui:include>
+
+        <div class="thank-you-container">
+        <div class="emoji">😊</div>
+        <div class="thank-you-message">Thank you for your participation!</div>
+        <p>Your feedback is valuable to us.</p>
+        <a href="uhome.xhtml" class="back-to-home">Back to Home</a>
+    </div>
+    </h:body>
+</html>
+

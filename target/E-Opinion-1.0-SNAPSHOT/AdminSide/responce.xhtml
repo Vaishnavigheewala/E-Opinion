@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>User Opinion</title>
+        <style>
+            /* Add your CSS styles here */
+            
+            h2 {
+                color: #333;
+                text-align: center;
+                margin-left: 200px;
+            }
+
+            h:form {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                background: #fff;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            .form-control label {
+			display: block;
+			margin-bottom: 10px;
+                        margin-left: 300px;
+		}
+
+            .form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 15%;
+                        margin-left: 300px;
+		}
+                
+            .dataTable {
+                width: 75%;
+                border-collapse: collapse;
+                margin-top: 20px;
+                margin-left: 300px;
+            }
+
+            .dataTable th, .dataTable td {
+/*                border: 1px #ddd;*/
+                padding: 2px;
+                text-align: left;
+            }
+
+            .dataTable th {
+                background-color: #f2f2f2;
+            }
+
+            .panelGrid {
+                margin-top: 10px;
+            }
+
+            .selectOneRadio {
+                margin-bottom: 10px;
+            }
+
+            .commandButton {
+                background-color: #000099;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 5px;
+                margin-left: 300px;
+
+            }
+
+            .commandButton:hover {
+                background-color: #2697FF;
+            }
+            
+        </style>
+    </h:head>
+    <h:body>
+                <ui:include src="navbar.html"></ui:include>
+        <f:view>
+          
+            <h:form>
+                <h2><h:outputText value="User Opinion"/></h2>
+                <div class="form-control">
+                <h:outputLabel for="emailid">Email Id :</h:outputLabel>
+                <h:inputText id="emailid" value="#{answerManagedBean.emailid}" required="true" />
+                </div>
+                <h:dataTable styleClass="dataTable" border="1" value="#{questionManagedBean.findallQuestion()}" var="item">
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Qid"/>
+                        </f:facet>
+                        <h:outputText value="#{item.qid}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="QTitle"/>
+                        </f:facet>
+                        <h:outputText style="margin-top: 100px;" value="#{item.QTitle}"/>
+                        <br></br>
+                         <h:panelGrid styleClass="panelGrid" columns="1">
+                             <h:selectOneRadio styleClass="selectOneRadio" value="#{answerManagedBean.answer1}" >
+                                 <f:selectItem itemValue="#{item.option1}" itemLabel="#{item.option1}" /><br/>
+                            </h:selectOneRadio>
+                            <h:selectOneRadio styleClass="selectOneRadio" value="#{answerManagedBean.answer2}" >
+                                 <f:selectItem itemValue="#{item.option2}" itemLabel="#{item.option2}"/>
+                            </h:selectOneRadio>
+                           <h:selectOneRadio styleClass="selectOneRadio" value="#{answerManagedBean.answer3}" >
+                                <f:selectItem itemValue="#{item.option3}" itemLabel="#{item.option3}"/>
+                            </h:selectOneRadio>
+                         <h:selectOneRadio styleClass="selectOneRadio" value="#{answerManagedBean.answer4}" >
+                                <f:selectItem itemValue="#{item.option4}" itemLabel="#{item.option4}" />
+                                </h:selectOneRadio>
+                             <h:selectOneRadio styleClass="selectOneRadio" value="#{answerManagedBean.answer5}" >
+                                <f:selectItem itemValue="#{item.option5}" itemLabel="#{item.option5}" />
+                            </h:selectOneRadio>
+                             
+                             
+                         </h:panelGrid>
+                        
+                    </h:column>
+                    
+                </h:dataTable>
+                <h:commandButton styleClass="commandButton" value="Submit" action="#{answerManagedBean.Answer()}" />
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+

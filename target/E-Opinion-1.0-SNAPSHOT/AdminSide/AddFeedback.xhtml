@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Feedback Page</title>
+        <style>
+                            body {
+			background-color: #EFEEF1;
+			font-family: Verdana;
+			text-align: center;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+                        margin-left:650px;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */ 
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input, 
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio 
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		.btn {
+			padding: 10px 20px;
+                    font-size: 16px;
+                    background-color: #white;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    margin-left:270px;
+                    margin-top:20px;
+                        }
+        </style>
+    </h:head>
+    <h:body>
+        <ui:include src="navbar.html"></ui:include>
+        <h:form id="form">
+                <h1>Feedback</h1>
+            		<div class="form-control">
+        <h:outputLabel for="emailid">emailid :</h:outputLabel>
+        <h:inputText id="emailid" value="#{feedbackManagedBean.emailid}" required="true"/>
+                        </div>
+                        		<div class="form-control">
+        <h:outputLabel for="f_text">Responce:</h:outputLabel>
+        <h:inputText id="f_text" value="#{feedbackManagedBean.f_text}" required="true" />
+                                </div>
+                    		<div class="form-control">
+        <h:outputLabel for="username">Username:</h:outputLabel>
+        <h:inputText id="username" value="#{feedbackManagedBean.username}" required="true"/>
+                         </div>
+        <div class="btn">
+            <h:commandButton value="Submit" action="#{feedbackManagedBean.InsertFeedback()}" />
+            </div>
+        </h:form>
+        
+    </h:body>
+</html>
+

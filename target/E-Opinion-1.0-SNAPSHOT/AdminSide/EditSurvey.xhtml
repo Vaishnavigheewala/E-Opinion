@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Edit Survey</title>
+        <style>
+                            body {
+			background-color: #EFEEF1;
+			font-family: Verdana;
+			text-align: center;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+                        margin-left:650px;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */ 
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input, 
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio 
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		.btn {
+			padding: 10px 20px;
+                    font-size: 16px;
+                    background-color: #white;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    margin-left:270px;
+                    margin-top:20px;
+                        }
+        </style>
+    </h:head>
+    <h:body>
+        
+                <ui:include src="Header.xhtml"></ui:include>
+        <f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="Edit Survey"/></h1>
+                <h:panelGrid columns="2">
+                    
+                    <h:outputLabel value="Sid:" for="sid" />
+                    <h:inputText id="sid" value="#{surveyManagedBean.obj.sid}" title="Sid" required="true" requiredMessage="The Sid field is required."/>
+                    <h:outputLabel value="Sname:" for="sname" />
+                    <h:inputText id="sname" value="#{surveyManagedBean.obj.sname}" title="Sname" />
+                    <h:outputLabel value="Stitle:" for="stitle" />
+                    <h:inputText id="stitle" value="#{surveyManagedBean.obj.stitle}" title="Stitle" />
+                    <h:outputLabel value="Stype:" for="stype" />
+                    <h:inputText id="stype" value="#{surveyManagedBean.obj.stype}" title="Stype" />
+                    <h:outputLabel value="SStatus:" for="SStatus" />
+                    <h:inputText id="SStatus" value="#{surveyManagedBean.obj.SStatus}" title="SStatus" />
+                    <h:outputLabel value="Stotal:" for="stotal" />
+                    <h:inputText id="stotal" value="#{surveyManagedBean.obj.stotal}" title="Stotal" required="true" requiredMessage="The Stotal field is required."/>
+                    <h:outputLabel value="Date:" for="date" />
+                    <h:inputText id="date" value="#{surveyManagedBean.obj.date}" title="Date" required="true" requiredMessage="The Date field is required.">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:commandButton value="Edit Survey" action="#{surveyManagedBean.update()}"/>
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+

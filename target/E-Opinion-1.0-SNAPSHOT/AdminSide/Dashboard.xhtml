@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+<meta charset="UTF-8">
+    <title> Responsiive Admin Dashboard </title>
+    <link rel="stylesheet" href="asset/css/jsfcss.css"/>
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/></meta>
+    </h:head>
+    <h:body>
+        
+        <div class="sidebar">
+    <div class="logo-details">
+<!--      <i class='bx bxl-c-plus-plus'></i>-->
+      <span class="logo_name">E-Opinion</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#" class="active">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="ViewSurvey.xhtml">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">Survey Management</span>
+          </a>
+        </li>
+        <li>
+          <a href="ViewQuestion.xhtml">
+            <i class='bx bx-list-ul' ></i>
+            <span class="links_name">Poll Managment</span>
+          </a>
+        </li>
+        <li>
+          <a href="Analytics.xhtml">
+            <i class='bx bx-pie-chart-alt-2' ></i>
+            <span class="links_name">Analytics</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="ViewFeedback.xhtml">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">Feedback Managment</span>
+          </a>
+        </li>
+        
+          <li>
+          <a href="About.xhtml">
+            <i class='bx bx-book-alt' ></i>
+            <span class="links_name">About Us</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="uindex.html">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search..."/>
+        <i class='bx bx-search' ></i>
+      </div>
+      <div class="profile-details">
+        <img src="asset/image/admin.jpeg" alt=""/>
+        <span class="admin_name">Admin</span>
+        <i class='bx bx-chevron-down' ></i>
+      </div>
+    </nav>
+    <div class="home-content">
+        
+      <div class="overview-boxes">
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total Survey</div>
+            <div class="number">
+                <h4>#{dashboardManagedBeans.surveyCounts()}</h4>
+            </div>
+            <div class="indicator">
+<!--              <i class='bx bx-up-arrow-alt'></i>-->
+<!--              <span class="text">Up from yesterday</span>-->
+            </div>
+          </div>
+          <i class='bx bx-cart-alt cart'></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total user</div>
+            <div class="number">
+                <h4>#{dashboardManagedBeans.userCounts()}</h4>
+            </div>
+            <div class="indicator">
+<!--              <i class='bx bx-up-arrow-alt'></i>-->
+<!--              <span class="text">Up from yesterday</span>-->
+            </div>
+          </div>
+          <i class='bx bxs-cart-add cart two' ></i>
+        </div>
+
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total Question</div>
+            <div class="number">
+                <h4>#{dashboardManagedBeans.questionCounts()}</h4>
+            </div>
+            <div class="indicator">
+<!--              <i class='bx bx-down-arrow-alt down'></i>-->
+<!--              <span class="text">Down From Today</span>-->
+            </div>
+          </div>
+          <i class='bx bxs-cart-download cart four' ></i>
+        </div>
+          
+      </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <img src="asset/image/market sur.jpeg" alt="Image 1"/>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <img src="asset/image/pollution sur.jpeg" alt="Image 2" height="178" width="275"/>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="asset/image/voting sur.jpg" alt="Image 3" height="178" width="275"/>
+        
+        <br></br><br></br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="asset/image/health sur.jpg" alt="Image 4" height="178" width="290"/>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="asset/image/FoodSurvey.jpg" alt="Image 5" height="178" width="275" />
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="asset/image/ed sur.jpg" alt="Image 5" height="178" width="275" />
+        
+    </div>
+  </section>
+  <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+ </script>
+        
+    </h:body>
+</html>
+
