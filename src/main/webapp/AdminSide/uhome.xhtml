@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>User Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .user-profile {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .user-profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        .survey-info {
+            padding: 2rem;
+            margin-left: 220px;
+            margin-right: 20px;
+        }
+
+        .survey-card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .survey-card h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .survey-card p {
+            color: #666;
+        }
+    </style>
+    </h:head>
+    <h:body>
+                <ui:include src="navbar.html"></ui:include>
+<!--         <header>
+        <h1>User Dashboard</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Surveys</a>
+        <a href="#">Profile</a>
+        <a href="#">Logout</a>
+    </nav>-->
+
+<!--    <div class="user-profile">
+        <img src="user-avatar.jpg" alt="User Avatar"/>
+        <h2>User Name</h2>
+        <p>Email: user@example.com</p>
+    </div>-->
+
+    <div class="survey-info">
+        <div class="survey-card">
+            <h3>Pollution</h3>
+            <p>Pollution is the presence or introduction into the environment of substances or contaminants that cause harm or discomfort to living organisms. It can take various forms, affecting air, water, soil, and even noise levels.</p>
+            <a href="#">Take Survey</a>
+        </div>
+
+        <div class="survey-card">
+            <h3>Market Research</h3>
+            <p>market research is a dynamic and ongoing process that empowers businesses to make informed decisions, adapt to changing market conditions, and ultimately achieve sustainable growth.</p>
+            <a href="#">Take Survey</a>
+        </div>
+        
+        <div class="survey-card">
+            <h3>Health</h3>
+            <p>This survey aims to gather insights into various aspects of health, lifestyle, and healthcare experiences. Your honest responses will contribute to shaping initiatives for a healthier community. </p>
+            <a href="#">Take Survey</a>
+        </div>
+        
+        <div class="survey-card">
+            <h3>Food Survey</h3>
+            <p>Please take a moment to share your thoughts on various aspects of food, including preferences, dietary habits, and opinions.</p>
+            <a href="#">Take Survey</a>
+        </div>
+
+        <!-- Add more survey cards as needed -->
+    </div>
+
+    </h:body>
+</html>
+

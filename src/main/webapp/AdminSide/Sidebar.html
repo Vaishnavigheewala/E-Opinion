@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="asset/css/jsfcss.css"/>
+    <title>Vertical Navigation Panel Example</title>
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'/>
+
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="logo-details">
+<!--      <i class='bx bxl-c-plus-plus'></i>-->
+      <span class="logo_name">E-Opinion</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="Dashboard.xhtml" class="active">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="ViewSurvey.xhtml">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">Survey Management</span>
+          </a>
+        </li>
+        <li>
+          <a href="ViewQuestion.xhtml">
+            <i class='bx bx-list-ul' ></i>
+            <span class="links_name">Poll Managment</span>
+          </a>
+        </li>
+        <li>
+          <a href="Analytics.xhtml">
+            <i class='bx bx-pie-chart-alt-2' ></i>
+            <span class="links_name">Analytics</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="ViewFeedback.xhtml">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">Feedback Managment</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="About.xhtml">
+            <i class='bx bx-book-alt' ></i>
+            <span class="links_name">About Us</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="uindex.html">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+        
+        
+      </ul>
+  </div>
+    
+    <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+ </script>
+ 
+</body>
+</html>

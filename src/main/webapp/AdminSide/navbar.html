@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="asset/css/jsfcss.css"/>
+    <title>Vertical Navigation Panel Example</title>
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'/>
+    <style>
+         header {
+         margin-left: 240px;
+         border : 2px solid blue;
+         background-color : #081D45;
+         color : white;
+         }
+         header p {
+         font-size : 100%;
+         }
+         #header-icon {
+         display : inline-block;
+         margin: 50px 10px 50px
+         }
+         #header-desc {
+         display : inline-block;
+         margin : 25px;
+         }
+         #header-menu {
+         display : inline-block;
+         float: right;
+         margin : 75px 50px 50px 50px;
+         }
+         </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="logo-details">
+<!--      <i class='bx bxl-c-plus-plus'></i>-->
+      <span class="logo_name">E-Opinion</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="uhome.xhtml" class="active">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+<!--        <li>
+          <a href="ViewSurvey.xhtml">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">Survey Management</span>
+          </a>
+        </li>
+        <li>
+          <a href="ViewQuestion.xhtml">
+            <i class='bx bx-list-ul' ></i>
+            <span class="links_name">Poll Managment</span>
+          </a>
+        </li>-->
+        <li>
+          <a href="responce.xhtml">
+            <i class='bx bx-pie-chart-alt-2' ></i>
+            <span class="links_name">User Opinion</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="AddFeedback.xhtml">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">Responce</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="uabout.xhtml">
+            <i class='bx bx-book-alt' ></i>
+            <span class="links_name">About Us</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="Login.html">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+        
+        
+      </ul>
+  </div>
+    <header>
+
+         <div id="header-desc">
+            <h1>Online Public Opinion for E-Governance</h1>
+            <p>
+               Looking for targeted responses to your surveys?
+Get the responses you need in minutes with Survey Audience, our trusted panel of more than 175 million respondents from across the globe. <br>
+E-Opinion</br>
+            </p>
+         </div>
+
+      </header>
+    <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+ </script>
+ 
+</body>
+</html>

@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Add Survey</title>
+
+        <style>
+                            body {
+			background-color: #EFEEF1;
+			font-family: Verdana;
+			text-align: center;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+                        margin-left:650px;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */ 
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input, 
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio 
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		.btn {
+			padding: 10px 20px;
+                    font-size: 16px;
+                    background-color: #white;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    margin-left:270px;
+                    margin-top:20px;
+                        }
+        </style>
+    </h:head>
+    <h:body>
+        <ui:include src="Header.xhtml"></ui:include>
+
+        <h:form id="form">
+                <h1>ADD Survey For E-Opinion</h1>
+            		<div class="form-control">
+        <h:outputLabel for="sname">sname :</h:outputLabel>
+        <h:inputText id="sname" value="#{surveyManagedBean.sname}" required="true"/>
+                        </div>
+                        		<div class="form-control">
+        <h:outputLabel for="stitle">stitle:</h:outputLabel>
+        <h:inputText id="stitle" value="#{surveyManagedBean.stitle}" required="true" />
+                                </div>
+                    		<div class="form-control">
+        <h:outputLabel for="stype">stype:</h:outputLabel>
+        <h:inputText id="stype" value="#{surveyManagedBean.stype}" required="true"/>
+                         </div>
+                   		<div class="form-control">
+        <h:outputLabel for="s_status">status :</h:outputLabel>
+        <h:inputText id="s_status" value="#{surveyManagedBean.s_status}" required="true" />
+                        </div>
+            		<div class="form-control">
+        <h:outputLabel for="stotal">stotal :</h:outputLabel>
+        <h:inputText id="stotal" value="#{surveyManagedBean.stotal}" required="true" />
+                         </div>
+           		<div class="form-control">
+        <h:outputLabel for="date">date :</h:outputLabel>
+        <h:inputText id="date" value="#{surveyManagedBean.date}" required="true" >
+               <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />          
+        </h:inputText>
+                        </div>
+
+            <div class="btn">
+            <h:commandButton value="ADD Survey" action="#{surveyManagedBean.InsertSurvey()}" />
+            </div>
+        </h:form>
+        
+    </h:body>
+</html>
+

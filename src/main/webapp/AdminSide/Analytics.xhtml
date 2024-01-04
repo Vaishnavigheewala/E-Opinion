@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Analytics of E-Opinion</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        
+    </h:head>
+    <h:body>
+                <ui:include src="Header.xhtml"></ui:include>
+     <!-- Bar Chart Container -->               
+        <div style="width: 50%; margin-left: 700px; margin-top: 20px;">
+            <h1 style="margin-left: 300px;">Bar Chart</h1>
+        <canvas id="barChart"></canvas>
+    </div>
+
+    <!-- Pie Chart Container -->
+    <div style="width: 50%; margin-left: 200px;">
+        <h1 style="margin-left: 300px;">Pie Chart</h1>
+        <canvas id="pieChart"></canvas>
+    </div>
+
+    <!-- doughnut Chart Container -->
+    <div style="width: 50%; margin-left: 700px;">
+        <h1 style="margin-left: 300px;">Doughnut Chart</h1>
+        <canvas id="donutChart"></canvas>
+    </div>
+    
+    <!-- JavaScript to create charts -->
+    <script src="BarChart.js"></script>
+    
+    </h:body>
+</html>
+
